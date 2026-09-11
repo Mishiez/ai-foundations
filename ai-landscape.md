@@ -99,3 +99,35 @@ The category in this table identifies the most useful primary lens for each exam
 | Manufacturing defect inspection | Computer Vision | Finds scratches, missing components, or other visual defects in product images. |
 | ChatGPT | Generative AI | Generates and transforms text in response to natural-language instructions. |
 | DALL-E | Generative AI | Generates or edits images from textual descriptions and related visual instructions. |
+
+## LLM Fundamentals
+
+Large language models (LLMs) are deep-learning models trained to work with sequences of language. During training, an LLM learns statistical relationships among tokens and uses those relationships to predict likely continuations. That prediction process can support generation, classification, extraction, and question answering, but a fluent response is not a guarantee that every claim is correct.
+
+### Tokens and Tokenization
+
+A token is a piece of text that a language model processes as one unit. A token may be a whole word, part of a word, punctuation, or whitespace-related text, depending on the tokenizer. Tokenization is the process of converting an input string into a sequence of token IDs, and converting generated token IDs back into text.
+
+For example, a tokenizer might split `unhelpful` into pieces such as `un` and `helpful`, while keeping a short common word as one token. The exact split depends on the model's vocabulary. Token counts matter because model cost, processing time, and the amount of text that fits in one request are measured in tokens rather than characters or words.
+
+### Embeddings
+
+An embedding is a numerical vector that represents a token, piece of text, image, or other item in a space where related meanings tend to have related positions. A model converts token IDs into vectors before processing them. These vectors are learned representations, not dictionary definitions: their meaning comes from how they interact with other representations and model parameters.
+
+Embeddings are also useful outside text generation. A search system can compare an embedded query with embedded documents to find semantically related passages, even when the query and document use different words.
+
+### Transformers
+
+The transformer is a neural-network architecture designed to process relationships among elements in a sequence. Unlike a simple left-to-right recurrence, a transformer can connect information across many positions using attention and can process training sequences efficiently in parallel. Modern LLMs commonly use transformer layers alongside token embeddings, feed-forward networks, normalization, and output layers.
+
+### Attention
+
+Attention lets the model assign different amounts of importance to other tokens when updating its representation of a token. A useful analogy is reading a sentence while answering a question: when deciding what `it` refers to, you look back at the nouns and surrounding clues that best resolve the reference instead of treating every earlier word as equally important.
+
+In a transformer, attention computes learned comparisons between tokens and combines information from the most relevant positions. In a causal language model, a token can attend only to the current position and earlier positions when predicting the next token. This preserves the left-to-right generation rule while allowing each prediction to use a broad, context-dependent view of the preceding text.
+
+### Context Windows
+
+A context window is the maximum number of tokens a model can consider in one request, including the input instructions, conversation history, retrieved material, and often the requested output. It is a per-request processing limit, not the same thing as the model's training data size or permanent memory.
+
+When a prompt exceeds the context window, an application must shorten it, summarize it, retrieve fewer passages, or split the task into multiple requests. Staying within the limit does not by itself make an answer accurate; it only ensures that the model can process the supplied context.
