@@ -80,3 +80,22 @@ Common uses include:
 - Drafting, revising, and summarizing text or software code.
 - Creating concept images, design variations, or synthetic training data.
 - Generating speech, music, captions, or video from text and other inputs.
+
+## Named Examples
+
+The category in this table identifies the most useful primary lens for each example. Several examples belong to more than one area in practice; for example, a deep-learning model may perform an NLP task and also provide a generative capability.
+
+| Example | Primary subfield | Description |
+| --- | --- | --- |
+| Spam email filter | Machine Learning | Learns from labeled messages to classify incoming email as spam or legitimate. |
+| Netflix recommendation system | Machine Learning | Predicts which films or shows a viewer may prefer from behavior and item patterns. |
+| Predictive maintenance model | Machine Learning | Estimates whether equipment is likely to fail based on sensor readings and maintenance history. |
+| AlphaFold | Deep Learning | Uses deep neural networks to predict the three-dimensional structures of proteins from their amino-acid sequences. |
+| Automatic speech recognition | Deep Learning | Converts spoken audio into text using neural models trained on speech and transcripts. |
+| Machine translation | Natural Language Processing | Produces an equivalent sentence in another human language while modeling meaning and grammar. |
+| Sentiment analysis | Natural Language Processing | Labels text according to expressed opinions or emotional tone, such as positive, neutral, or negative. |
+| Google Search language understanding | Natural Language Processing | Interprets a search query and its context so results can match the user's intent rather than only exact words. |
+| Face detection in a camera | Computer Vision | Locates faces in an image or video frame without necessarily identifying the people. |
+| Manufacturing defect inspection | Computer Vision | Finds scratches, missing components, or other visual defects in product images. |
+| ChatGPT | Generative AI | Generates and transforms text in response to natural-language instructions. |
+| DALL-E | Generative AI | Generates or edits images from textual descriptions and related visual instructions. |
